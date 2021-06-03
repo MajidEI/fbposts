@@ -1,0 +1,10 @@
+<div class="card mx-auto mb-3">
+	<span class="h5 card-title">
+		<span class="card-subtitle mb-2 text-muted">{{ post.owner }}</span> - {{ post.title }}
+	</span>
+	<img src="{{post.image}}" class="card-img-top mx-auto image" alt="Image contains a bird and a cat">
+	<div class="card-body">
+		<p class="card-text">{{ post.body }}</p>
+		<app-comment-list [post_Id]="post.id"></app-comment-list>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/">Facebook v2</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<ng-template [ngIf]='isLoggedIn' [ngIfElse]='notLoggedIn' ]class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/posts/new">New post</a>
+				</li>
+			</ul>
+			<span class="text-muted me-4">{{ user }}</span>
+			<button type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+		</ng-template>
+		<ng-template #notLoggedIn>
+			<div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+			<button type="button" class="btn btn-light" (click)="login()">Login</button>
+			<button type="button" class="btn btn-dark" (click)="register()">Register</button>
+		</ng-template>
+	</div>
+</nav>

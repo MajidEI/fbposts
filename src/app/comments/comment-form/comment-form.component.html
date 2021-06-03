@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+	<div class="row">
+		<div class="col-10 mb-3">
+			<input type="text" class="form-control" id="comment" placeholder="Type your comment here..."
+				formControlName="body">
+		</div>
+		<div class="col-2">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</div>
+</form>

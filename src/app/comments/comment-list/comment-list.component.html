@@ -1,0 +1,4 @@
+<ul class="list-group">
+	<app-comment-item *ngFor="let comment of comments" [body]="comment.body" [owner]="comment.owner"></app-comment-item>
+	<app-comment-form [post_id]="post_Id" (newCommentEvent)="addNewComment($event)"></app-comment-form>
+</ul>
